@@ -7,21 +7,209 @@
     <title>fabiancm.dev</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css">
     <link rel="stylesheet" href="./tailwind.css">
+    <style>
+        ::selection {
+            background:#414868;
+            color: inherit;
+        }
+        .active_tab{
+            border-bottom: 1px solid #2ac3de;
+        }
+        .tab_padding_y{
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+        .tab_padding_t_only{
+            padding-top: 1px;
+            padding-bottom: 0px;
+        }
+        .close{
+            display: none;
+        }
+        .active_tab .close{
+            display: block;
+            position: absolute;
+            right: 0.5rem;
+        }
+    </style>
 </head>
-<body class="p-0 h-screen bg-darkblue">
-    <main class="container mx-auto my-24 2xl:px-64 lg:px-32 sm:px-12 text-white leading-7" style="font-family: Fira Code">
-        <section>
-            <h1 class="text-red underline text-lg">¿Quien soy?</h1>
-            <br>
-            <p>
-                Lorem ipsum dolor sit amet, <strong class="text-cyan">consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <br>
-            <p>
-                Sed ut perspiciatis <i class="underline text-green">unde omnis iste natus error sit voluptatem</i> accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore <i class="text-purple">et dolore magnam aliquam quaerat voluptatem.</i> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-            </p>
-        </section>
-    </main>
-    <script src="bundle.js"></script>
+<body class="p-0 bg-darkblue">
+    <div class="container mx-auto 2xl:px-64 lg:px-32 px-12 text-white leading-7" style="font-family: Fira Code">
+        <nav class="border border-black border-solid border-t-0 bg-darkblue w-full h-10 lg:flex hidden text-sm sticky top-0">
+            <span id="tab-0" class="flex justify-start items-center px-2 tab_padding_t_only w-44 cursor-pointer border-r border-black border-solid relative" onclick="toggleTab(0)">
+                <span class="mr-2 text-lg">🏠</span> ¿Quién soy?
+                <span class="close" onclick="event.stopPropagation(); displayAllSections()">✗</span>
+            </span>
+            <span id="tab-1" class="flex justify-start items-center px-2 tab_padding w-44 cursor-pointer border-r border-black border-solid relative" onclick="toggleTab(1)">
+                <span class="mr-2 text-lg">🧔</span> Contacto
+                <span class="close" onclick="event.stopPropagation(); displayAllSections()">✗</span>
+            </span>
+            <span id="tab-2" class="flex justify-start items-center px-2 tab_padding w-44 cursor-pointer border-r border-black border-solid relative" onclick="toggleTab(2)">
+                <span class="mr-2 text-lg">💼</span> Experiencia
+                <span class="close" onclick="event.stopPropagation(); displayAllSections()">✗</span>
+            </span>
+            <span id="tab-3" class="flex justify-start items-center px-2 tab_padding w-44 cursor-pointer border-r border-black border-solid relative" onclick="toggleTab(3)">
+                <span class="mr-2 text-lg">🎓</span> Formación
+                <span class="close" onclick="event.stopPropagation(); displayAllSections()">✗</span>
+            </span>
+            <span id="tab-4" class="flex justify-start items-center px-2 tab_padding w-44 cursor-pointer border-r border-black border-solid relative" onclick="toggleTab(4)">
+                <span class="mr-2 text-lg">⭐</span> Habilidades
+                <span class="close" onclick="event.stopPropagation(); displayAllSections()">✗</span>
+            </span>
+        </nav>
+        <main>
+            <!-- INFO -->
+            <section id="section-0" class="content-block my-12">
+                <h1 class="text-red underline text-lg">¿Quién soy?</h1>
+                <br>
+                <p>
+                    Lorem ipsum dolor sit amet, <strong class="text-cyan">consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <br>
+                <p>
+                    Sed ut perspiciatis <i class="underline text-green">unde omnis iste natus error sit voluptatem</i> accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore <i class="text-purple">et dolore magnam aliquam quaerat voluptatem.</i> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?<span class="animate-blink">|</span>
+                </p>
+            </section>
+
+            <!-- CONTACTO -->
+            <section id="section-1" class="content-block my-12">
+                <div class="text-red">&ltContacto&gt</div>
+                    <div class="text-cyan ml-12">
+                        &ltEmail&gt
+                        <span class="text-white">fabiancm1995@gmail.com</span>
+                        &lt/Email&gt
+                    </div>
+                    <div class="text-cyan ml-12">
+                        &ltCurriculum
+                        <a href="" class="text-purple underline">descargar</a>
+                        &gt
+                        &lt/Curriculum&gt
+                    </div>
+                    <div class="text-cyan ml-12">
+                        &ltLinkedIn
+                        <a href="" class="text-purple underline">acceder</a>
+                        &gt
+                        &lt/LinkedIn&gt
+                    </div>
+                    <div class="text-cyan ml-12">
+                        &ltGithub
+                        <a href="" class="text-purple underline">acceder</a>
+                        &gt
+                        &lt/Github&gt
+                    </div>
+                <div class="text-red">&lt/Contacto&gt</div>
+            </section>
+
+            <!-- EXPERIENCIA -->
+            <section id="section-2" class="content-block my-12">
+                <h1 class="text-red underline text-lg">Experiencia laboral</h1>
+                <br>
+                <p>
+                    <span class="text-orange">{</span>
+                    <span class="text-green">'Mitca Studios'</span>:
+                    <span class="text-cyan">Desarrollador full stack</span>
+                    <span class="text-orange">} <span class="text-white">,</span></span>
+                    <span class="text-purple">// 2017 (2 meses)</span>
+                </p>
+                <p>
+                    <span class="text-orange">{</span>
+                    <span class="text-green">'Digital Art & Designers'</span>:
+                    <span class="text-cyan">Desarrollador full stack</span>
+                    <span class="text-orange">} </span>
+                    <span class="text-purple">// 2018 - actualidad</span>
+                </p>
+                <p>
+                    <span class="text-red">...</span>
+                </p>
+            </section>
+
+            <!-- FORMACIÓN -->
+            <section id="section-3" class="content-block my-12">
+                <h1 class="text-red underline text-lg">Formación</h1>
+                <br>
+                <ul>
+                    <li>
+                        <span class="text-orange">{</span>
+                        <span class="text-green">'Bachillerato de ciencias'</span>:
+                        <span class="text-cyan">IES Vega de San Mateo</span>
+                        <span class="text-orange">} <span class="text-white">,</span></span>
+                        <span class="text-purple">// 2010 - 2012</span>
+                    </li>
+                    <li>
+                        <span class="text-orange">{</span>
+                        <span class="text-green">'Grado en ingeniería informática'</span>:
+                        <span class="text-cyan">ULPGC</span>
+                        <span class="text-orange">} <span class="text-white">,</span></span>
+                        <span class="text-purple">// 2012 - 2015 (sin finalizar)</span>
+                    </li>
+                    <li>
+                        <span class="text-orange">{</span>
+                        <span class="text-green">'Ciclo superior en desarrollo de aplicaciones web'</span>:
+                        <span class="text-cyan">IES El Rincón</span>
+                        <span class="text-orange">} <span class="text-white">,</span></span>
+                        <span class="text-purple">// 2015 - 2017</span>
+                    </li>
+                    <li>
+                        <span class="text-orange">{</span>
+                        <span class="text-green">'Cursos en <a href="https://laracasts.com" class="underline" target="_blank">Laracasts</a>'</span>: <span class="text-purple">// 2019 - 2020</span>
+                        <br>
+                        <span class="text-orange ml-12">[</span>
+                        <br>
+                        <div class="ml-24">
+                            <span class="text-cyan">Code Katas in PHPUnit<span class="text-white">,</span></span>
+                            <br>
+                            <span class="text-cyan">Let's Build A Forum with Laravel and TDD<span class="text-white">,</span></span>
+                            <br>
+                            <span class="text-cyan">10 Techniques for Cleaner Code<span class="text-white">,</span></span>
+                            <br>
+                            <span class="text-cyan">Object-Oriented Principles in PHP<span class="text-white">,</span></span>
+                            <br>
+                            <span class="text-cyan">What's New in Vue 3<span class="text-white">,</span></span>
+                            <br>
+                            <span class="text-cyan">Multitenancy in Practice<span class="text-white">,</span></span>
+                            <br>
+                            <span class="text-red">...</span>
+                        </div>
+                        <span class="text-orange ml-12">]</span>
+                        <br>
+                        <span class="text-orange">}<span class="text-white">,</span></span>
+                    </li>
+                    <li>
+                        <span class="text-orange">{</span>
+                        <span class="text-green">'Cursos en <a href="https://codely.tv/" class="underline" target="_blank">CodelyTV</a>'</span>: <span class="text-purple">// 2021</span>
+                        <br>
+                        <span class="text-orange ml-12">[</span>
+                        <br>
+                        <div class="ml-24">
+                            <span class="text-cyan">Testing introducción y buenas prácticas<span class="text-white">,</span></span>
+                            <br>
+                            <span class="text-cyan">Principios SOLID aplicados<span class="text-white">,</span></span>
+                            <br>
+                            <span class="text-cyan">Arquitectura hexagonal<span class="text-white">,</span></span>
+                            <br>
+                            <span class="text-cyan">CQRS: Command Query Responsibility Segregation<span class="text-white">,</span></span>
+                            <br>
+                            <span class="text-cyan">Docker: De 0 a deployment<span class="text-white">,</span></span>
+                            <br>
+                            <span class="text-red">...</span>
+                        </div>
+                        <span class="text-orange ml-12">]</span>
+                        <br>
+                        <span class="text-orange">}<span class="text-white">,</span></span>
+                        <br>
+                        <span class="text-red">...</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- SKILLS -->
+            <section id="section-4" class="content-block my-12">
+                <h1 class="text-red underline text-lg">Habilidades</h1>
+                <br>
+
+            </section>
+        </main>
+    </div>
+    <script src="./index.js"></script>
 </body>
 </html>
