@@ -33,26 +33,26 @@
         }
     </style>
 </head>
-<body class="p-0 bg-darkblue">
+<body class="p-0 bg-blue">
     <div class="container mx-auto 2xl:px-64 lg:px-32 px-12 text-white leading-7" style="font-family: Fira Code">
-        <nav class="border border-black border-solid border-t-0 bg-darkblue w-full h-10 lg:flex hidden text-sm sticky top-0">
-            <span id="tab-0" class="flex justify-start items-center px-2 tab_padding_t_only w-44 cursor-pointer border-r border-black border-solid relative" onclick="toggleTab(0)">
+        <nav class="border border-darkblue border-solid border-t-0 bg-blue w-full h-10 lg:flex hidden text-sm sticky top-0">
+            <span id="tab-0" class="flex justify-start items-center px-2 tab_padding_t_only w-44 cursor-pointer border-r border-darkblue border-solid relative" onclick="toggleTab(0)">
                 <span class="mr-2 text-lg">🏠</span> ¿Quién soy?
                 <span class="close" onclick="event.stopPropagation(); displayAllSections()">✗</span>
             </span>
-            <span id="tab-1" class="flex justify-start items-center px-2 tab_padding w-44 cursor-pointer border-r border-black border-solid relative" onclick="toggleTab(1)">
+            <span id="tab-1" class="flex justify-start items-center px-2 tab_padding w-44 cursor-pointer border-r border-darkblue border-solid relative" onclick="toggleTab(1)">
                 <span class="mr-2 text-lg">🧔</span> Contacto
                 <span class="close" onclick="event.stopPropagation(); displayAllSections()">✗</span>
             </span>
-            <span id="tab-2" class="flex justify-start items-center px-2 tab_padding w-44 cursor-pointer border-r border-black border-solid relative" onclick="toggleTab(2)">
+            <span id="tab-2" class="flex justify-start items-center px-2 tab_padding w-44 cursor-pointer border-r border-darkblue border-solid relative" onclick="toggleTab(2)">
                 <span class="mr-2 text-lg">💼</span> Experiencia
                 <span class="close" onclick="event.stopPropagation(); displayAllSections()">✗</span>
             </span>
-            <span id="tab-3" class="flex justify-start items-center px-2 tab_padding w-44 cursor-pointer border-r border-black border-solid relative" onclick="toggleTab(3)">
+            <span id="tab-3" class="flex justify-start items-center px-2 tab_padding w-44 cursor-pointer border-r border-darkblue border-solid relative" onclick="toggleTab(3)">
                 <span class="mr-2 text-lg">🎓</span> Formación
                 <span class="close" onclick="event.stopPropagation(); displayAllSections()">✗</span>
             </span>
-            <span id="tab-4" class="flex justify-start items-center px-2 tab_padding w-44 cursor-pointer border-r border-black border-solid relative" onclick="toggleTab(4)">
+            <span id="tab-4" class="flex justify-start items-center px-2 tab_padding w-44 cursor-pointer border-r border-darkblue border-solid relative" onclick="toggleTab(4)">
                 <span class="mr-2 text-lg">⭐</span> Habilidades
                 <span class="close" onclick="event.stopPropagation(); displayAllSections()">✗</span>
             </span>
@@ -73,31 +73,32 @@
 
             <!-- CONTACTO -->
             <section id="section-1" class="content-block my-12">
-                <div class="text-red">&ltContacto&gt</div>
-                    <div class="text-cyan ml-12">
-                        &ltEmail&gt
-                        <span class="text-white">fabiancm1995@gmail.com</span>
-                        &lt/Email&gt
-                    </div>
-                    <div class="text-cyan ml-12">
-                        &ltCurriculum
-                        <a href="" class="text-purple underline">descargar</a>
-                        &gt
-                        &lt/Curriculum&gt
-                    </div>
-                    <div class="text-cyan ml-12">
-                        &ltLinkedIn
-                        <a href="" class="text-purple underline">acceder</a>
-                        &gt
-                        &lt/LinkedIn&gt
-                    </div>
-                    <div class="text-cyan ml-12">
-                        &ltGithub
-                        <a href="" class="text-purple underline">acceder</a>
-                        &gt
-                        &lt/Github&gt
-                    </div>
-                <div class="text-red">&lt/Contacto&gt</div>
+                <h1 class="text-red underline text-lg">Contacto</h1>
+                <br>
+                <div class="text-cyan">
+                    &ltEmail&gt
+                    <span class="text-white">fabiancm1995@gmail.com</span>
+                    &lt/Email&gt
+                </div>
+                <div class="text-cyan">
+                    &ltCurriculum
+                    <a href="" class="text-purple underline" target="_blank">descargar</a>
+                    &gt
+                    <span class="text-purple">// TODO</span>
+                    &lt/Curriculum&gt
+                </div>
+                <div class="text-cyan">
+                    &ltLinkedIn
+                    <a href="https://www.linkedin.com/in/fabian-chirivella/" class="text-purple underline" target="_blank">acceder</a>
+                    &gt
+                    &lt/LinkedIn&gt
+                </div>
+                <div class="text-cyan">
+                    &ltGithub
+                    <a href="https://github.com/fabianchm" class="text-purple underline" target="_blank">acceder</a>
+                    &gt
+                    &lt/Github&gt
+                </div>
             </section>
 
             <!-- EXPERIENCIA -->
@@ -109,7 +110,7 @@
                     <span class="text-green">'Mitca Studios'</span>:
                     <span class="text-cyan">Desarrollador full stack</span>
                     <span class="text-orange">} <span class="text-white">,</span></span>
-                    <span class="text-purple">// 2017 (2 meses)</span>
+                    <span class="text-purple">// 2017 (2 meses de prácticas)</span>
                 </p>
                 <p>
                     <span class="text-orange">{</span>
@@ -206,7 +207,67 @@
             <section id="section-4" class="content-block my-12">
                 <h1 class="text-red underline text-lg">Habilidades</h1>
                 <br>
+                <span class="text-orange">{</span>
+                <br>
 
+                <span class="text-green ml-12">'Lenguajes de programación'</span>:
+                <br>
+                <span class="text-orange ml-12">[</span>
+                <div class="ml-24">
+                    <p class="text-cyan">HTML y CSS<span class="text-white">,</span></p>
+                    <p class="text-cyan">Javascript<span class="text-white">,</span></p>
+                    <p class="text-cyan">SASS<span class="text-white">,</span></p>
+                    <p class="text-cyan">PHP<span class="text-white">,</span></p>
+                </div>
+                <span class="text-orange ml-12">]<span class="text-white">,</span></span>
+                <br>
+                <span class="text-orange">} <span class="text-white">,</span></span>
+                <br>
+                <span class="text-orange">{</span>
+                <br>
+
+                <span class="text-green ml-12">'Frameworks'</span>:
+                <br>
+                <span class="text-orange ml-12">[</span>
+                <div class="ml-24">
+                    <p class="text-cyan">Laravel<span class="text-white">,</span></p>
+                    <p class="text-cyan">PHPUnit<span class="text-white">,</span></p>
+                    <p class="text-cyan">Vue.js<span class="text-white">,</span></p>
+                    <p class="text-cyan">Tailwindcss<span class="text-white">,</span></p>
+                    <p class="text-cyan">Bootstrap</p>
+                </div>
+                <span class="text-orange ml-12">]<span class="text-white">,</span></span>
+                <br>
+                <span class="text-orange">} <span class="text-white">,</span></span>
+                <br>
+
+                <span class="text-green ml-12">'Gestión de BBDD'</span>:
+                <br>
+                <span class="text-orange ml-12">[</span>
+                <div class="ml-24">
+                    <p class="text-cyan">MySQL<span class="text-white">,</span></p>
+                    <p class="text-cyan">MariaDB</p>
+                </div>
+                <span class="text-orange ml-12">]<span class="text-white">,</span></span>
+                <br>
+                <span class="text-orange">} <span class="text-white">,</span></span>
+                <br>
+
+                <span class="text-green ml-12">'Otras herramientas'</span>:
+                <br>
+                <span class="text-orange ml-12">[</span>
+                <div class="ml-24">
+                    <p class="text-cyan">GIT<span class="text-white">,</span></p>
+                    <p class="text-cyan">GitLab/Github<span class="text-white">,</span></p>
+                    <p class="text-cyan">Docker<span class="text-white">,</span></p>
+                    <p class="text-cyan">Vagrant<span class="text-white">,</span></p>
+                    <p class="text-cyan">Zsh<span class="text-white">,</span></p>
+                    <p class="text-cyan">VSCode/PHPStorm</p>
+                </div>
+                <span class="text-orange ml-12">]<span class="text-white">,</span></span>
+                <br>
+                <span class="text-orange">} <span class="text-white">,</span></span>
+                <br>
             </section>
         </main>
     </div>
