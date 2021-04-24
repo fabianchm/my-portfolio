@@ -18,15 +18,8 @@ function toggleTab(index){
     active_tab = index;
 }
 
-function displayAllSections(){
-    document.getElementById("tab-" + active_tab).classList.remove(...active_tab_classes)
-    active_tab = null
-
-    const sections = document.querySelectorAll('.content-block');
-    sections.forEach(section => {
-        section.classList.remove('hidden');
-        section.classList.add('block');
-    });
+function closeTab(){
+    toggleTab(0);
 }
 
 function clearActiveTab(){
