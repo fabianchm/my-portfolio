@@ -39,3 +39,5 @@ function clearActiveTab(){
         section.classList.add('block');
     });
 }
+
+toggleTab(0);
