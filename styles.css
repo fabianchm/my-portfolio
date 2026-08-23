@@ -1,23 +1,194 @@
+/* Everforest Dark Medium Palette */
+:root {
+    --bg-dim: #232A2E;
+    --bg0: #2D353B;
+    --bg1: #343F44;
+    --bg2: #3D484D;
+    --bg3: #475258;
+    --bg4: #4F585E;
+    --bg5: #56635f;
+    --bg-visual: #543A48;
+    --fg: #D3C6AA;
+    --red: #E67E80;
+    --orange: #E69875;
+    --yellow: #DBBC7F;
+    --green: #A7C080;
+    --aqua: #83C092;
+    --blue: #7FBBB3;
+    --purple: #D699B6;
+    --grey0: #7A8478;
+    --grey1: #859289;
+    --grey2: #9DA9A0;
+}
+
+* {
+    color-scheme: dark;
+}
+
+body {
+    background-color: var(--bg0);
+    color: var(--fg);
+    font-family: 'Fira Code', monospace;
+}
+
 ::selection {
-    background:#414868;
-    color: inherit;
+    background: var(--blue);
+    color: var(--bg0);
 }
-.active_tab{
-    border-bottom: 1px solid #2ac3de;
+
+.active_tab {
+    border-bottom: 2px solid var(--blue);
+    background-color: rgba(127, 187, 179, 0.1);
 }
-.tab_padding_y{
+
+.tab_padding_y {
     padding-top: 1px;
     padding-bottom: 1px;
 }
-.tab_padding_t_only{
+
+.tab_padding_t_only {
     padding-top: 1px;
     padding-bottom: 0px;
 }
-.close{
+
+.close {
     display: none;
+    color: var(--red);
+    cursor: pointer;
+    transition: color 0.2s ease;
 }
-.active_tab .close{
+
+.active_tab .close {
     display: block;
     position: absolute;
     right: 0.5rem;
+}
+
+.close:hover {
+    color: var(--orange);
+}
+
+/* Tailwind color classes mapping */
+.bg-blue {
+    background-color: var(--bg0);
+}
+
+.bg-darkblue {
+    background-color: var(--bg-dim);
+}
+
+.text-white {
+    color: var(--fg);
+}
+
+.text-red {
+    color: var(--red);
+}
+
+.text-orange {
+    color: var(--orange);
+}
+
+.text-yellow {
+    color: var(--yellow);
+}
+
+.text-green {
+    color: var(--green);
+}
+
+.text-aqua {
+    color: var(--aqua);
+}
+
+.text-cyan {
+    color: var(--blue);
+}
+
+.text-blue {
+    color: var(--blue);
+}
+
+.text-purple {
+    color: var(--purple);
+}
+
+.text-grey1 {
+    color: var(--grey1);
+}
+
+.border-darkblue {
+    border-color: rgba(127, 187, 179, 0.2);
+}
+
+/* Typography */
+main section h1 {
+    color: var(--orange);
+    font-weight: 600;
+}
+
+main section a {
+    color: var(--purple);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+main section a:hover {
+    color: var(--blue);
+}
+
+.content-block {
+    transition: opacity 0.3s ease;
+}
+
+.content-block.hidden {
+    display: none;
+}
+
+.content-block.block {
+    display: block;
+}
+
+h1 {
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.8;
+    color: var(--fg);
+}
+
+strong {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+i {
+    font-style: italic;
+    color: var(--green);
+}
+
+ul {
+    line-height: 1.8;
+}
+
+ul li {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+nav {
+    background-color: var(--bg0);
+    border-color: rgba(127, 187, 179, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav span {
+    transition: all 0.2s ease;
+    border-color: rgba(127, 187, 179, 0.2);
+}
+
+nav span:hover {
+    background-color: var(--bg1);
 }
